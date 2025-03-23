@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            transition: 0.3s ease-in-out;
+        }
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: black;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .navbar .toggle-btn {
+            cursor: pointer;
+            padding: 10px;
+            background: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 50px;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .typed-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: purple;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            background: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hero img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+
+        /* About Me Section */
+        .about {
+            text-align: center;
+            padding: 50px;
+        }
+        .about-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+        .about-box {
+            background: #fff;
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            width: 40%;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        .about-box img {
+            width: 80px;
+            border-radius: 50%;
+        }
+        .progress-bar {
+            width: 100%;
+            background: #ccc;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            position: relative;
+        }
+        .progress {
+            height: 100%;
+            background: purple;
+            border-radius: 5px;
+            width: 90%;
+        }
+
+        /* Projects Section */
+        .projects {
+            text-align: center;
+            padding: 50px;
+        }
+        .project-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .project-box {
+            background: #fff;
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 50px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero, .about-container, .project-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .about-box, .project-box {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="typed-text"></span></h1>
+            <h1><span class="cursor"></span></h1>
+            <p>My name is Shrinidhi, I am a student who is aspiring to become a web developer.</p>
+            <div class="buttons">
+                <button class="btn">Hire Me</button>
+                <button class="btn"><a href="shrinidhi cv.pdf">Dowload cv</a></button>
+            </div>
+        </div>
+        <img src="second_pic removed bg.png" alt="Profile Image">
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-box">
+                <img src="second_pic removed bg.png" alt="profile image">
+                <p>iam a student actively seeking for an intership to gain hands-on Experience and grow my skills.</p>
+                <button class="btn">Hire Me</button>
+            </div>
+            <div class="about-box">
+                <p>HTML</p>
+                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                <p>CSS</p>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                <p>C++</p>
+                <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                <p>JavaScript</p>
+                <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-box">
+                <h3>Completed</h3>
+                <p>This is my first project</p>
+            </div>
+            <div class="project-box">
+                <h3>Intership</h3>
+                <p>company name:8Queens software technology pvt ltd</p>
+            </div>
+            <div class="project-box">
+                <h3>currently working on:</h3>
+                <p>Netflix clone website</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </div>
+    </section>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("light-mode");
+        }
+    </script>
+        <script>
+            const text = "Student";
+            let index = 0;
+            const speed = 200; // Typing speed
+            const typedTextElement = document.querySelector(".typed-text");
+        
+            function typeEffect() {
+                if (index < text.length) {
+                    typedTextElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, speed);
+                } else {
+                    setTimeout(() => {
+                        typedTextElement.textContent = ""; // Reset text
+                        index = 0;
+                        typeEffect(); // Restart effect
+                    }, 1000); // Delay before restart
+                }
+            }
+        
+            document.addEventListener("DOMContentLoaded", typeEffect);
+        </script>
+        
+    
+
+</body>
+</html>
